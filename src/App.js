@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import MovieList from "./Movies/MovieList";
+import Movie from "./Movies/Movie";
 import SavedList from "./Movies/SavedList";
 
 export default function App() {
@@ -40,7 +41,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<MovieList movies={movies} />} />
-        {/* <Route path="/movies/:id" element={<Movie />} /> */}
+        <Route path="/movies/:id" element={<Movie />} />
       </Routes>
     </div>
   );
